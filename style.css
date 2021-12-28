@@ -8,12 +8,13 @@
   scroll-behavior: smooth;
 }
 :root{
-    --primary-color:#ff8882;
+    --primary-color:#FFFF00;
     --black-color:#0E2431;
     --white-color:#fff;
+    --newbg-color:#FFFF00;
 }
 body{
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
@@ -41,12 +42,12 @@ nav{
 }
 nav.sticky{
   background:var(--primary-color);
-  padding:13px 0;
+  padding:28px 0;
 }
 nav .navbar{
   width:90%;
   display:flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin:auto;
 }
@@ -75,11 +76,9 @@ nav .navbar .menu a{
   padding:6px 0;
   transition: all 0.4s ease;
 }
-.navbar .menu a:hover{
-  color:var(--primary-color);
-}
+
 nav.sticky .menu a{
-  color:var(--white-color);
+  color:#000;
 }
 nav.sticky .menu a:hover{
   color:var(--black-color);
@@ -90,7 +89,7 @@ nav.sticky .menu a:hover{
 nav .menu-btn,
 .navbar .menu .cancel-btn{
   position:absolute;
-  color:var(--white-color);
+  color:#000;
   right:30px;
   top:20px;
   font-size: 20px;
@@ -99,20 +98,20 @@ nav .menu-btn,
   display: none;
 }
 nav .menu-btn{
-  color:var(--primary-color);
+  color:#000;
 }
 nav.sticky .menu-btn{
-  color:var(--white-color);
+  color:#000;
 }
 .navbar .menu .menu-btn{
-  color:var(--white-color);
+  color:#000;
 }
 
 /* home section styling */
 .home{
   height:100vh;
   width:100%;
-  background:url("portfolio-images/portfolio-man.jpg") no-repeat;
+  background:url("portfolio-images/newbg1.png") no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -130,7 +129,7 @@ nav.sticky .menu-btn{
   color:var(--black-color);
 }
 .home .text-two{
-  color:var(--black-color);
+  color:#000;
   font-size: 50px;
   font-weight: 600;
   margin-left: -3px;
@@ -138,7 +137,7 @@ nav.sticky .menu-btn{
 .home .text-three{
   font-size: 40px;
   margin:5px 0;
-  color:var(--primary-color);
+  color:#000;
 }
 
 .home .text-four{
@@ -154,40 +153,29 @@ nav.sticky .menu-btn{
 .home .button{
   margin:14px 0;
 }
-.home .button  button {
-  outline:none;
-  padding:8px 16px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 400;
-  background:var(--primary-color);
-  color:var(--white-color);
-  cursor:pointer;
-  border:2px solid transparent;
-  transition: all 0.4s ease;
-}
+
 .button a{
   outline:none;
   padding:8px 16px;
-  border-radius: 6px;
-  font-size: 20px;
+  border-radius: 20px;
+  font-size: 18px;
   font-weight: 400;
   background:var(--primary-color);
-  color:var(--white-color);
+  color:#000;
   cursor:pointer;
   border:2px solid transparent;
   transition: all 0.4s ease;
 }
-.home .button  button:hover{
-  border-color:var(--primary-color);
+.button  a:hover{
+  border-color:var(--black-color);
   background-color: var(--white-color);
-  color:var(--primary-color);
+  color:var(----black-color);
 }
 /* follow start*/
 .follow i{
     font-size: 20px;
-    margin: -5px;
-    color: var(--primary-color);
+    margin: -3px;
+    color: black;
     padding: 10px;
 }
 nav.sticky .follow i{
@@ -219,7 +207,7 @@ section{
 section .content{
   width:80%;
   margin:40px auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 section .title{
   display:flex;
@@ -266,6 +254,9 @@ section .title span::after{
 .about .about-details .right{
   width:55%;
 }
+.button{
+  margin-top: 20px;
+}
 section .topic{
   color:var(--black-color);
   font-size:25px;
@@ -275,28 +266,8 @@ section .topic{
 .about-details .right p{
   text-align: justify;
   color:var(--black-color);
+  line-height: 26px;
 }
-section .button{
-  margin:16px 0;
-}
-section .button button{
-  outline:none;
-  padding:8px 16px;
-  border-radius: 4px;
-  font-size: 25px;
-  font-weight: 400;
-  background: var(--primary-color);
-  color:var(--white-color);
-  border:2px solid transparent;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-section .button button:hover{
-  border-color:var(--primary-color);
-  background-color: var(--white-color);
-  color:var(--primary-color);
-}
-
 /* My Skills CSS */
 .skills{
   background:#f0f8ff;
@@ -315,6 +286,7 @@ section .button button:hover{
 .skills-details p{
   color:var(--black-color);
   text-align: justify;
+  line-height: 26px;
 }
 .skills .skills-details .experience{
   display:flex;
@@ -344,11 +316,11 @@ section .button button:hover{
 }
 .skills-details .boxes .topic{
   font-size: 20px;
-  color:var(--primary-color);
+  color:#000;
 }
 .skills-details .boxes .per{
   font-size: 60px;
-  color:var(--primary-color);
+  color:#000;
 }
 
 /* My Services CSS */
@@ -389,49 +361,29 @@ section .button button:hover{
 }
 .services .boxes .box:hover .topic,
 .services .boxes .box:hover p{
-  color:var(--white-color);
+  color:#000;
   transition: all 0.4s ease;
 }
 
 /* Contact Me CSS */
-.contact{
-  background: #f0f8ff;
-}
-.contact .content{
-  margin:0 auto;
-  padding:30px 0;
-}
-.contact .text{
-  width:80%;
-  text-align: center;
-  margin:auto;
-}
 
 /* Footer CSS */
 footer{
   background:var(--primary-color);
   padding:15px 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
-footer .text span{
-  font-size: 17px;
-  font-weight: 400;
-  color:var(--white-color);
-}
-footer .text span a{
-  font-weight: 500;
-  color:var(--white-color);
-}
-footer .text span a:hover{
-  text-decoration: underline;
+.span1{
+  cursor: pointer;
+  font-weight: bold;
 }
 /* Scroll To Top Button CSS */
 .scroll-button a{
   position:fixed;
   bottom:20px;
   right:20px;
-  color:var(--white-color);
+  color:#000;
   background:var(--primary-color);
   padding:10px 12px;
   font-size: 18px;
@@ -494,7 +446,6 @@ footer .text span a:hover{
    nav .navbar .menu a{
      font-size:23px;
      display:block;
-     color:var(--white-color);
      margin:10px 0;
    }
    nav.sticky .menu a:hover{
@@ -550,6 +501,5 @@ footer .text span a:hover{
 
   .skills-details .boxes .per{
     font-size: 50px;
-    color:var(--primary-color);
   }
 }
